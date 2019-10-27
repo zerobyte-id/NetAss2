@@ -12,13 +12,16 @@ Make it easy for Pentester to do penetration testing on network.
 ### Installation
 
 ```
+git clone https://github.com/zerobyte-id/NetAss2.git
+```
+```
 cd NetAss2
 ```
 ```
 sudo chmod +x install.sh
 ```
 ```
-./install.sh
+sudo ./install.sh
 ```
 
 ### Run
