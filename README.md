@@ -45,20 +45,3 @@ netass2
 ### Screenshot (Documentation)
 ![NetAss2 Host](https://raw.githubusercontent.com/zerobyte-id/NetAss2/master/img-docs/netass2-host.png)
 ![NetAss2 Port](https://raw.githubusercontent.com/zerobyte-id/NetAss2/master/img-docs/netass2-port.png)
-
-### License
-
-```
-           DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
-                   Version 2, December 2004
-	
-Everyone is permitted to copy and distribute verbatim or modified
-copies of this license document, and changing it is allowed as long
-as the name is changed.
-
-           DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
-  TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
-
-0. You just DO WHAT THE FUCK YOU WANT TO.
-```
-Or you can click [here](https://github.com/zerobyte-id/NetAss2/blob/master/LICENSE).
