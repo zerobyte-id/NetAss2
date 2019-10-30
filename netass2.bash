@@ -110,7 +110,7 @@ if [[ ${MENU} == 1 ]]; then
 		fi
 		echo " INFO: Nmap run..."
 		echo " INFO: Discovering host..."
-		nmap -sn ${NETWORK} -o nmap-host.na2out &> /dev/null
+		nmap -sn -T5 ${NETWORK} -o nmap-host.na2out &> /dev/null
 		if [[ $(cat nmap-host.na2out | grep -i 'Nmap scan report for' | awk '{print $5}' | wc -l) -ge 1 ]]; then
 			cat nmap-host.na2out | grep -i 'Nmap scan report for' | awk '{print $5}' >> /opt/NetAss2/project/${PROJECT}/host-alive.csv
 			if [[ -f nmap-host.na2out ]]; then
