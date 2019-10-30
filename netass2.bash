@@ -108,6 +108,7 @@ if [[ ${MENU} == 1 ]]; then
 		if [[ -f host-discover.na2out ]]; then
 			rm host-discover.na2out
 		fi
+		echo " INFO: Nmap run..."
 		echo " INFO: Discovering host..."
 		nmap -sn ${NETWORK} -o nmap-host.na2out &> /dev/null
 		if [[ $(cat nmap-host.na2out | grep -i 'Nmap scan report for' | awk '{print $5}' | wc -l) -ge 1 ]]; then
@@ -150,6 +151,7 @@ elif [[ ${MENU} == 2 ]]; then
 		if [[ -f port-scan.na2out ]]; then
 			rm port-scan.na2out
 		fi
+		echo " INFO: Nmap run..."
 		echo " INFO: Discovering port on ${IPADDR}..."
 		nmap -p- -sT -sV --version-intensity 5 -T5 ${IPADDR} -oN port-scan.na2out -v &> /dev/null
 		cat port-scan.na2out | grep ^[0-9] | grep '[0-9][/]' | sed 's/;/,/g' | awk '{for(i=4;i<=NF;i++) printf $i" ";print ";"$1";"$3}' | sed 's/ ;/;/g' | awk -F ';' '{print $2";"$3";"$1}' | sed "s/^/${IPADDR};/g" >> /opt/NetAss2/project/${PROJECT}/port-open.csv
@@ -188,6 +190,7 @@ elif [[ ${MENU} == 3 ]]; then
 			if [[ -f port-scan.na2out ]]; then
 				rm port-scan.na2out
 			fi
+			echo " INFO: Nmap run..."
 			echo " INFO: Discovering port on ${IPADDR}..."
 			nmap -p- -sT -sV --version-intensity 5 -T5 ${IPADDR} -oN port-scan.na2out -v &> /dev/null
 			cat port-scan.na2out | grep ^[0-9] | grep '[0-9][/]' | sed 's/;/,/g' | awk '{for(i=4;i<=NF;i++) printf $i" ";print ";"$1";"$3}' | sed 's/ ;/;/g' | awk -F ';' '{print $2";"$3";"$1}' | sed "s/^/${IPADDR};/g" >> /opt/NetAss2/project/${PROJECT}/port-open.csv
@@ -234,6 +237,7 @@ elif [[ ${MENU} == 4 ]]; then
 				if [[ -f port-scan.na2out ]]; then
 					rm port-scan.na2out
 				fi
+				echo " INFO: Nmap run..."
 				echo " INFO: Discovering port on ${IPADDR}..."
 				nmap -p- -sT -sV --version-intensity 5 -T5 ${IPADDR} -oN port-scan.na2out -v &> /dev/null
 				cat port-scan.na2out | grep ^[0-9] | grep '[0-9][/]' | sed 's/;/,/g' | awk '{for(i=4;i<=NF;i++) printf $i" ";print ";"$1";"$3}' | sed 's/ ;/;/g' | awk -F ';' '{print $2";"$3";"$1}' | sed "s/^/${IPADDR};/g" >> /opt/NetAss2/project/${PROJECT}/port-open.csv
@@ -459,7 +463,7 @@ elif [[ ${MENU} == '!' ]]; then
 	fi
 
 elif [[ ${MENU} == '0' ]]; then
-	echo " INFO: Goodbye~"
+	echo " INFO: Good bye~"
 	echo ""
 	exit
 
