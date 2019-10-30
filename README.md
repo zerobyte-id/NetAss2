@@ -18,10 +18,10 @@ git clone https://github.com/zerobyte-id/NetAss2.git
 cd NetAss2
 ```
 ```
-sudo chmod +x install.sh
+sudo chmod +x install.bash
 ```
 ```
-sudo ./install.sh
+sudo ./install.bash
 ```
 
 ### Run

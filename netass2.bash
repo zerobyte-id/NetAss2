@@ -17,7 +17,7 @@ function BannerPrint() {
 	echo ' | ALIAS : NetAss2                        | '
 	echo ' | TYPE  : VA Framework                   | '
 	echo ' | VERS  : 0.1-RC                         | '
-	echo ' | LICEN : WTFPL V2                       | '
+	echo ' | LICEN : GPL v3                         | '
 	echo ' | LINK  : github.com/zerobyte-id/NetAss2 | '
 	echo ' ------------------------------------------ '
 }
